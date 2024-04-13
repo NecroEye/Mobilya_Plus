@@ -1,4 +1,4 @@
-package com.muratcangzm.mobilyaarti.ui.utils
+package com.muratcangzm.mobilyaarti.utils
 
 object BuildConfig {
 
