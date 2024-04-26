@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -97,9 +99,10 @@ dependencies {
     implementation(libs.arsceneview)
     // Timber-Logger
     implementation(libs.jakewharton.timber)
-    //Koin
-    implementation (libs.koin.androidx.compose)
-    implementation(libs.koin.androidx.compose.navigation)
+    //Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+
     //Coil
     implementation(libs.coil)
     //DataStore
@@ -112,4 +115,7 @@ dependencies {
     //Accompanist-permission
     implementation(libs.accompanist.permissions)
 
+}
+kapt {
+    correctErrorTypes = true
 }

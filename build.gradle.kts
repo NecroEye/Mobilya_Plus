@@ -5,7 +5,7 @@ buildscript{
     repositories{
         mavenCentral()
         google()
-        maven { url = uri("https://maven.google.com") }
+        maven { url = uri("https://www.jitpack.io" ) }
     }
 }
 
@@ -14,5 +14,6 @@ buildscript{
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
+    id("com.google.dagger.hilt.android") version "2.48.1" apply false
 }
 
